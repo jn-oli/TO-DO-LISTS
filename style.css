@@ -1,0 +1,147 @@
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #0c0c0f;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.app-container {
+    background-color: #fff;
+    width: 650px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    overflow: hidden;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.input-container {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+#taskInput {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+}
+
+#addTaskBtn {
+    padding: 10px 20px;
+    background-color: #9272dc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#addTaskBtn:hover {
+    background-color: #8dbef2;
+}
+
+.filter-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.filter-container button {
+    padding: 8px 15px;
+    background-color: #8dbef2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.filter-container button:hover {
+    background-color: #8dbef2;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.task-item.completed {
+    background-color: #e0ffe0;
+    text-decoration: line-through;
+}
+
+.task-item.pending {
+    background-color: #fff3cd;
+}
+
+.task-item button {
+    background-color: #eb6472;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.task-item button:hover {
+    background-color: #eb6472;
+}
+
+.task-item .complete-btn {
+    background-color: #6cfb8d;
+    margin-right: 10px;
+}
+
+.task-item .complete-btn:hover {
+    background-color: #6cfb8d;
+}
+
+/* Add responsive styling */
+@media (max-width: 480px) {
+    .app-container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    #taskInput {
+        width: 70%;
+    }
+}
